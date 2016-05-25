@@ -18,9 +18,7 @@ $ docker run -d -p 80:80 \
 ```
 
 ### Known Hosts
-`git clone` will fail if the target host is not known. docker-acha ships with a prepopulated `known_hosts` file for common cloud
-providers like GitHub or BitBucket (see the `known_hosts` file in this repository for details). However, if you want to support
-your own git server, you probably have to provide a `known_hosts` file which contains the corresponding SSH host key.
+`git clone` will fail if the target host is not known. docker-acha ships with a prepopulated `known_hosts` file for common cloud providers like GitHub or BitBucket (see the `known_hosts` file in this repository for details). However, if you want to support your own git server, you probably have to provide a `known_hosts` file which contains the corresponding SSH host key.
 ```
 $ docker run -d -p 80:80 \
     -v /path/to/known_hosts:/root/.ssh/known_hosts
