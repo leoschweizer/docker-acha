@@ -12,7 +12,7 @@ $ docker run -d -p 80:80 leoschweizer/acha
 ### Custom SSH keys
 A custom SSH key for the use with private repositories can be provided by mounting it into the container:
 ```
-$ docker run -d -p 80:80 \
+$ docker run -d -p 80:80 leoschweizer/acha \
     -v /path/to/id_rsa:/root/.ssh/id_rsa
     -e ACHA_PRIVATE_KEY=/root/.ssh/id_rsa
 ```
@@ -20,7 +20,7 @@ $ docker run -d -p 80:80 \
 ### Known Hosts
 `git clone` will fail if the target host is not known. docker-acha ships with a prepopulated `known_hosts` file for common cloud providers like GitHub or BitBucket (see the `known_hosts` file in this repository for details). However, if you want to support your own git server, you probably have to provide a `known_hosts` file which contains the corresponding SSH host key.
 ```
-$ docker run -d -p 80:80 \
+$ docker run -d -p 80:80 leoschweizer/acha \
     -v /path/to/known_hosts:/root/.ssh/known_hosts
 ```
 
